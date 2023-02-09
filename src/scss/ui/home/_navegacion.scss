@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navegacion {
+  
+    &__nav {
+       
+		@include m.flex(flex, column, space-between, center);
+       
+        
+        @include m.tablet {
+            @include m.flex(flex, row, space-between, center);
+            margin-right: 4rem;
+        }
+
+    }
+    
+	&__link {
+        
+       color: v.$bordo;
+       font-weight: 300;
+       font-size: 2.5rem;
+   padding: 0.5rem;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.1);
+            // color: v.$rosa;
+            color: v.$colorFondo;
+            background-color: v.$bordo;
+             border-radius: 0.5rem;
+         }
+
+         @include m.tablet {
+            
+            margin-right: 4rem;
+            font-size: 2rem;
+            // padding: 2rem 0;
+            
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.headerc {
+
+    &__flexc {
+        margin: 0;
+        @include m.flex(flex, column, space-between, center);
+        
+        @include m.tablet {
+            @include m.flex(flex, row, space-between, center);
+     }
+    }
+
+    &__logoempresac {
+       
+
+        @include m.tablet {
+            width: 20%;
+      }
+    }
+
+
+    &__imgc {
+        width: 100%;
+        padding: 1rem 0 0 1rem;
+        margin-bottom: 3rem;
+
+       @include m.tablet {
+        margin-bottom: 0;
+       }
+    }
+
+    &__logoc {
+        
+        @include m.tablet {
+            width: 35%;
+         }
+     }
+
+     &__fotoc {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        
+
+        @include m.tablet {
+            width: 80%;
+            height: auto;
+         }
+     }
+
+     &__linkc {
+        color: v.$bordo;
+        font-size: 2rem;
+        margin-top: 3rem;
+
+        @include m.tablet {
+            margin-right: 3rem;
+            margin-top: 0;
+        }
+       }
+}

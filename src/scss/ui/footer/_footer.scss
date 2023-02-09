@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.footer {
+ 
+  text-align: center;
+    @include m.flex(flex, column, space-between, center);
+
+    &__logoc {
+      margin: 1.5rem 0 1.5rem 0;
+    }
+ 
+    &__imgc {
+      width: 30%;
+     
+      margin: auto;  
+
+      @include m.tablet {
+        width: 40%;
+      }
+    }
+
+    &__parrafoc {
+       
+        font-weight: 200;
+        text-align: center;
+    }
+}

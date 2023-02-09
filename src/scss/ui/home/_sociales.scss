@@ -1,0 +1,26 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.redes {
+    height: 15%;
+    
+    &__sociales {
+        @include m.flex(flex, row, center, center);
+    }
+
+    &__iconos {
+        width: 90%;
+        
+        margin-bottom: 5rem;
+        padding: 0 2rem 0 2rem;
+        
+        @include m.tablet {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            width: 100%; 
+            
+        }
+    }
+}
+

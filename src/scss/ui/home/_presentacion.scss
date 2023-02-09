@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.presentacion {
+    width: 100%;
+    @include m.flex(flex, column, center, center);
+    @include m.tablet {
+        width: 55%;
+        height: 100vh;
+    }
+   
+    &__image{
+        width: 100%;
+        @include m.flex(flex, column, center, center);
+        @include m.tablet {
+            width: 60%;
+            height: auto;
+         }
+        }
+       
+        &__wine {
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            animation-name: wine;
+            animation-iteration-count:initial;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-direction: reverse;
+           
+            @include m.tablet {
+                width: 100%;
+                height: auto;
+               padding: 0;
+            }
+        }
+    
+         @keyframes wine {
+            from {
+                transform: translatex(0%);
+                opacity: 1;
+            }
+
+            to {
+                transform: translatex(100%);
+                opacity: 0;
+            }
+        }
+}
+

@@ -1,0 +1,121 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.silvestra {
+ 
+    width: 100%;
+    margin: 0 auto;
+    @include m.flex(flex, column, space-between, center);
+  
+
+   &__contenidos { 
+    padding: 2rem;
+       border-bottom: 0.1rem solid v.$colorLinea;
+
+       @include m.flex(flex, column, space-between, center);
+      @include m.tablet {
+           @include m.flex(flex, row, space-between, center);
+       }
+   } 
+
+   &__h4s {   
+       font-size: 4rem;
+       padding: 3rem 0 5rem 0;
+       text-transform: uppercase;
+       font-weight: 300;
+       margin-bottom: 3rem;
+       text-align: center;
+       
+   }
+
+   &__fotulis {
+       
+       width: 40%;
+       height: auto;
+       padding: 2rem 0;
+       
+       @include m.tablet {
+           padding: 2rem;
+       margin-left: 10rem;
+       width: 35%;
+       height: auto;
+       }
+   }
+
+   &__h2s {
+       font-weight: 500;
+       color: v.$bordo;
+       width: 70%;
+       margin: 0 auto;
+       font-style: italic;
+       padding: 2rem 0;
+       font-size: 3rem;
+       text-align: center;
+       text-transform: uppercase;
+
+       @include m.tablet {
+           text-align: left;
+       }
+   }
+
+   &__h3s {
+       width: 70%;
+       margin: 0 auto;
+       font-weight: 400;
+       padding: 2rem 0;
+       font-size: 2rem;
+       text-align: center;
+
+       @include m.tablet {
+           text-align: left;
+           
+       }
+   }
+   
+
+   &__parrafos {
+       width: 100%;
+       font-weight: 300;
+       height: auto;
+       text-align: left;
+       font-size: 2rem;
+
+       @include m.tablet {
+           text-align: left;
+           width: 70%;
+           margin: 0 auto;
+          }
+   }
+}
+
+.content {
+    
+    width: 80%;
+    margin: 0 auto;
+    @include m.flex(flex, column, space-between, center);
+
+    &__h4s {
+        font-size: 4rem;
+        padding: 2rem 0 2rem 0;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+     
+    &__parrafos {
+        width: 100%;
+        font-weight: 300;
+        height: auto;
+        text-align: center;
+        font-size: 2rem;
+       
+ 
+        @include m.tablet {
+          
+            width: 70%;
+            margin: 0 auto;
+           }
+    }
+ } 

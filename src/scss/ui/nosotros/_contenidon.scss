@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenidon {
+    @include m.bgImage('../img/madera.jpg');
+    &__imgn {
+        
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    &__texton {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__h1n {
+        color: v.$negro;
+        text-align: center;
+        font-size: clamp(5rem, 11vw, 15rem);
+        font-family: v.$fuenteSecundaria;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__parrafon {
+        color: v.$negro;
+        font-weight: 300;
+        font-family: v.$fuentePrincipal; 
+        font-size: clamp(2rem, 3vw, 4rem);
+        margin-bottom: 5rem;
+    }
+
+}

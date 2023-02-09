@@ -1,0 +1,91 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.mainc {
+    
+   @include m.grid(1, 1fr);
+ 
+    margin: 0 auto 0 auto;
+    
+
+    &__card {
+       
+        width: 40%;
+        height: 30rem;
+        margin: 3rem auto 3rem auto;
+        border-radius: 1rem;
+      
+   
+        @include m.flex(flex, column, center, center);
+        
+    }
+
+    &__imgc {
+        width: 60%;
+        height: auto;
+        margin: 0 auto 3rem auto;
+    }
+
+    &__textoc {
+        color: v.$blanco;
+        font-weight: 400;
+        font-size: clamp(2rem, 2vw, 3rem);
+    }
+
+    &__textoc1 {
+        width: 80%;
+        color: v.$blanco;
+        font-weight: 400;
+        font-size: clamp(1.8rem, 2vw, 3rem);
+        text-align: center;
+    }
+
+    &__textoc2 {
+        width: 80%;
+        text-align: center;
+        color: v.$blanco;
+        font-weight: 400;
+        font-size: clamp(1.2rem, 2vw, 3rem);
+    }
+
+    &__logosc {
+        width: 100%;
+        @include m.flex(flex, column, space-around, center);
+
+        @include m.tablet {
+            @include m.flex(flex, row, space-around, center);
+        }
+    }
+
+    @include m.tablet {
+        margin-top: 0;
+    }
+
+    &__parra {
+        @include m.bgImage('../img/brindis.jpg');
+        background-attachment: fixed;
+        background-position: center top;
+        height: 80rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__cita {
+        text-align: center;
+        padding: 1.5rem;
+        color: v.$blanco;
+        
+        font-weight: 300;
+        font-style: italic;
+        padding-top: 5rem;
+        
+        
+        
+        @include m.tablet {
+            font-size: 2.2rem;
+            }
+    }
+
+}
